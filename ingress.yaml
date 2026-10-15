@@ -9,7 +9,7 @@
 #     - host: srv2052563.hstgr.cloud
 #       http:
 #         paths:
-#           - path: /yahia
+#           - path: /fouzia
 #             pathType: Prefix
 #             backend:
 #               service:
@@ -20,7 +20,7 @@
 #     - host: srv2052563.hstgr.cloud
 #       http:
 #         paths:
-#           - path: /yahia/admin
+#           - path: /fouzia/admin
 #             pathType: Prefix
 #             backend:
 #               service:
@@ -35,11 +35,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: blog-ingress
-  namespace: yahia
+  namespace: fouzia
 spec:
   ingressClassName: traefik
   rules:
-    - host: blog.yahia.195.35.2.222.nip.io
+    - host: blog.fouzia.195.35.2.222.nip.io
       http:
         paths:
           - path: /
@@ -50,7 +50,7 @@ spec:
                 port:
                   number: 3000
 
-    - host: admin.yahia.195.35.2.222.nip.io
+    - host: admin.fouzia.195.35.2.222.nip.io
       http:
         paths:
           - path: /
